@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <input id="box" type="text" placeholder="" onkeyup="func()">
+</body>
+</html>
+<script>
+          let searchBox=document.getElementById("box");
+          let savedData= localStorage.getItem("f")
+          if(savedData){
+                    searchBox.value=savedData
+          }
+
+
+          // this func used for saving the data
+          function func(){
+                    localStorage.setItem("f",searchBox.value)
+          }
+</script>
